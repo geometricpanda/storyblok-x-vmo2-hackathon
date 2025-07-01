@@ -1,12 +1,15 @@
 import { storyblok } from "@/storyblok";
-import { StoryblokStory } from "@storyblok/react/rsc";
+import { render } from "./render.action";
+import { Preview } from "./preview";
 
 const Page = async () => {
   const { data } = await storyblok.getStory("home", {
     version: "draft",
   });
 
-  return <StoryblokStory story={data.story} />;
+  const story = await render(data.story);
+
+  return <Preview storyId={data.story.id}>{story}</Preview>;
 };
 
 export default Page;

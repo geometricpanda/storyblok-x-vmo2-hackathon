@@ -5,7 +5,11 @@ import { PageBlok } from "./bloks/page.blok";
 import { TeaserBlok } from "./bloks/teaser.blok";
 import { GridBlok } from "./bloks/grid.blok";
 import { FeatureBlok } from "./bloks/feature.blok";
-import { HeroBlok } from "./bloks/hero.blok";
+import { VideoHeroBlok } from "./bloks/video-hero.blok";
+import { SectionBlok } from "./bloks/section.blok";
+import { CardBlok } from "./bloks/card.blok";
+import { AccordionGroupBlok } from "./bloks/accordion-group.blok";
+import { AccordionBlok } from "./bloks/accordion.blok";
 
 export const getStoryblokApi = storyblokInit({
   accessToken: STORYBLOK.ACCESS_TOKEN,
@@ -18,7 +22,11 @@ export const getStoryblokApi = storyblokInit({
     [Blok.Teaser]: TeaserBlok,
     [Blok.Grid]: GridBlok,
     [Blok.Feature]: FeatureBlok,
-    [Blok.Hero]: HeroBlok,
+    [Blok.VideoHero]: VideoHeroBlok,
+    [Blok.Section]: SectionBlok,
+    [Blok.Card]: CardBlok,
+    [Blok.AccordionGroup]: AccordionGroupBlok,
+    [Blok.Accordion]: AccordionBlok,
   },
 });
 

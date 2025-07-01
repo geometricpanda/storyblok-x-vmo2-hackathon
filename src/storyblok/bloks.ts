@@ -6,7 +6,11 @@ export enum Blok {
   Teaser = "teaser",
   Grid = "grid",
   Feature = "feature",
-  Hero = "hero",
+  VideoHero = "video_hero",
+  Section = "section",
+  Card = "card",
+  AccordionGroup = "accordion_group",
+  Accordion = "accordion",
 }
 
 export type BC<T extends ISbComponentType<Blok>> = FC<{ blok: T }>;
