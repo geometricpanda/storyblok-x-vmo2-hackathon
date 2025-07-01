@@ -10,6 +10,8 @@ import { SectionBlok } from "./bloks/section.blok";
 import { CardBlok } from "./bloks/card.blok";
 import { AccordionGroupBlok } from "./bloks/accordion-group.blok";
 import { AccordionBlok } from "./bloks/accordion.blok";
+import { TextBlok } from "./bloks/text.blok";
+import { ImageBlok } from "./bloks/image.blok";
 
 export const getStoryblokApi = storyblokInit({
   accessToken: STORYBLOK.ACCESS_TOKEN,
@@ -27,6 +29,8 @@ export const getStoryblokApi = storyblokInit({
     [Blok.Card]: CardBlok,
     [Blok.AccordionGroup]: AccordionGroupBlok,
     [Blok.Accordion]: AccordionBlok,
+    [Blok.Text]: TextBlok,
+    [Blok.Image]: ImageBlok,
   },
 });
 

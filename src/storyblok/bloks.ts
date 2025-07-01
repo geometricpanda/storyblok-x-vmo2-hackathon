@@ -11,6 +11,8 @@ export enum Blok {
   Card = "card",
   AccordionGroup = "accordion_group",
   Accordion = "accordion",
+  Text = "text",
+  Image = "image",
 }
 
 export type BC<T extends ISbComponentType<Blok>> = FC<{ blok: T }>;

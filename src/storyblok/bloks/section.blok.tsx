@@ -7,22 +7,29 @@ import {
 import { clsx } from "clsx";
 
 type PaddingSize = "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
+type LayoutType = "normal" | "wide";
 
 type SectionProps = ISbComponentType<Blok.Section> & {
   children: Array<ISbComponentType<Blok>>;
   padding_top?: PaddingSize;
   padding_bottom?: PaddingSize;
+  layout?: LayoutType;
 };
 
 export const SectionBlok: BC<SectionProps> = ({
-  blok: { children, padding_top, padding_bottom, ...blok },
+  blok: { children, padding_top, padding_bottom, layout = "wide", ...blok },
 }) => {
   return (
     <section
       {...storyblokEditable(blok)}
       className={clsx(
-        "max-w-7xl mx-auto",
+        "mx-auto",
         "px-4",
+        // Layout classes
+        {
+          "max-w-4xl": layout === "normal",
+          "max-w-7xl": layout === "wide",
+        },
         // Padding top classes
         {
           "pt-4": padding_top === "sm",
