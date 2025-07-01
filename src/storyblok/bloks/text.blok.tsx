@@ -15,7 +15,7 @@ export const TextBlok: BC<TextProps> = ({ blok: { text, ...blok } }) => {
     <div {...storyblokEditable(blok)}>
       {text && (
         <div
-          className="prose prose-sm"
+          className="prose prose-sm max-w-none [&_ul]:list-disc [&_ul]:ml-4 [&_ol]:list-decimal [&_ol]:ml-4 [&_li]:mb-1"
           dangerouslySetInnerHTML={{ __html: html as string }}
         />
       )}
